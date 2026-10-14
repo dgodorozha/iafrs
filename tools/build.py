@@ -312,83 +312,42 @@ INDEX = f'''
   </div>
 </section>
 
-<section class="section" aria-labelledby="problem-h">
+<section class="section section--panel" aria-labelledby="what-h">
   <div class="wrap">
     <div class="head">
-      <div class="head__row">{tag('H', 'HRD')}<h2 id="problem-h">Why the question is open</h2></div>
-      <p class="lede">Supervisors are building surveillance tools and circuit breakers for a market in which AI agents trade. The way those tools are validated can certify the one that fails at the decision it exists to inform.</p>
+      <div class="head__row">{tag('W', 'WHT')}<h2 id="what-h">What we do</h2></div>
+      <p class="lede">Six lines of work, towards a financial system that stays stable when the traders are machines.</p>
     </div>
-    <div class="cols">
-      <div>
-        <h3>Herding is plausible, and flagged</h3>
-        <p>Trading agents built on shared foundation models can react in correlated ways, so that a routine shock becomes a dislocation. The Financial Stability Board, IOSCO, the Bank of England and the IMF have each raised the concern, and algorithmic trading already accounts for around 70 per cent of United States equity trading.</p>
-      </div>
-      <div>
-        <h3>The yardstick is wrong</h3>
-        <p>Surveillance tools and intervention rules are validated on aggregate fidelity: how well a synthetic market reproduces volatility, spreads and correlation. A tool can match those statistics and still fail at the supervisory decision, which agents are destabilising and when to act.</p>
-      </div>
-      <div>
-        <h3>The record is empty</h3>
-        <p>Historical back tests contain almost no episodes of machine herding, so a tool can only be scored on the decision in a generated market with a known truth. Public agent based studies describe behaviour; they benchmark no tools or rules and leave no audit trail on which a certification could rest.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--ink" aria-labelledby="evidence-h">
-  <div class="wrap">
-    <div class="head">
-      <div class="head__row">{tag('R', 'RES')}<h2 id="evidence-h">What the evidence shows</h2></div>
-      <p class="lede">The decision gap is real, a certification can carry a guarantee, and the guarantee can be stress tested.</p>
-    </div>
-    <div class="tiles">
-      <div class="tile"><div class="tile__n">0.68</div><div class="tile__l">Decision gap</div><div class="tile__t">Tools ranked by how well they mimic market statistics are close to the reverse of tools ranked by whether they catch the destabilising agents (0 is the same order, 1 the exact reverse).</div></div>
-      <div class="tile"><div class="tile__n">90%</div><div class="tile__l">Rankings still invert</div><div class="tile__t">In 90 per cent of 400 resampled batteries the two orders disagree, so the gap is not one lucky draw.</div></div>
-      <div class="tile"><div class="tile__n">1.00 &rarr; 0.25</div><div class="tile__l">The volatility trigger</div><div class="tile__t">First by fidelity, last on the decision: the conventional yardstick certifies the tool that fails at the decision it exists to inform.</div></div>
-      <div class="tile"><div class="tile__n">1 in 4</div><div class="tile__l">Guaranteed false alert bound</div><div class="tile__t">Tail dependence is certified by a conformal threshold set on eight calibration scenarios, and tops the decision ranking in 98 per cent of resamples.</div></div>
-    </div>
-    <div class="counts"><span><b>8</b> sentinels</span><span><b>8</b> rules</span><span><b>51</b> synthetic markets in <b>18</b> families</span><span><b>400</b> scenario bootstrap</span><span><b>48</b> reinforcement learning traders</span><span><b>31</b> critic checks</span><span><b>2</b> human gates</span></div>
-    <div class="after-tiles">
-      <p>The figures come from a demonstration battery produced with <a href="probatio.html">Probatio</a>. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
-      <a class="btn btn--ghost-ink" href="research.html">How the results are read</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--panel" aria-labelledby="prog-h">
-  <div class="wrap">
-    <div class="head">
-      <div class="head__row">{tag('P', 'PRG')}<h2 id="prog-h">Programmes</h2></div>
-      <p class="lede">Five lines of work, one question: when the traders are machines, how should a supervisor decide which tools and rules to trust, and how can that decision be certified?</p>
-    </div>
-    <div class="prog">
+    <div class="prog prog--3">
       <article style="background:var(--paper)">
-        {tag('C', 'CRT')}
-        <h3>Decision first certification</h3>
-        <p>Scoring surveillance tools on the supervisory decision rather than on resemblance to market statistics, with finite sample guarantees: conformal false alert bounds, winner stability and walk forward regret, so that the procedure, not one tool, is what is certified.</p>
+        {tag('T', 'TLS')}
+        <h3>Build open source tools to measure market risk</h3>
+        <p>Surveillance sentinels, intervention rules and the procedure that certifies them, published for any authority to run on its own data.</p>
       </article>
       <article style="background:var(--paper)">
-        {tag('H', 'HRD')}
-        <h3>Agentic markets and herding</h3>
-        <p>Synthetic markets with a known truth: noise traders, fundamentalists, vendor clusters, reinforcement learning traders that learn to herd, distilled language model personas and colluding manipulators, and the dose response of concentration on a single model vendor.</p>
+        {tag('D', 'DAT')}
+        <h3>Work with industrial partners to provide open source data sets</h3>
+        <p>Scenario families and synthetic markets with a known truth, calibrated with partners and released for research and supervision.</p>
       </article>
       <article style="background:var(--paper)">
-        {tag('I', 'INT')}
-        <h3>Intervention rules</h3>
-        <p>Circuit breakers, price bands, venue halts, dynamic throttles and kill switches across EU, UK and US style instruments, each scored on containment, false halts, tail risk, time to dislocation and proportionality against the untreated market.</p>
+        {tag('L', 'LLM')}
+        <h3>Contribute to market focused LLM research</h3>
+        <p>How language model agents trade, herd and respond to intervention, and how their behaviour can be supervised.</p>
       </article>
       <article style="background:var(--paper)">
-        {tag('G', 'GOV')}
-        <h3>Governance, audit and assurance</h3>
-        <p>The controls that let a supervisory system rest on generated evidence: human gates whose approver is checked against a register, signed replayable ledgers, critics that recompute every figure, transparency records and a red team that attacks the certified tool.</p>
+        {tag('S', 'STB')}
+        <h3>Promote market stability through our research</h3>
+        <p>Evidence for the authorities responsible for stability, reported with intervals, evidence grades and limitations.</p>
       </article>
-      <article class="wide" style="background:var(--paper)">
-        <div>
-          {tag('O', 'OPN')}
-          <h3>An open benchmark</h3>
-          <span class="status">in preparation</span>
-        </div>
-        <p>A public library of scenario families and agent templates, written in a bounded declarative language and hashed into every battery that uses them, so that any authority can calibrate the markets to its own data, add its own families and compare its tools against the same truth as everyone else.</p>
+      <article style="background:var(--paper)">
+        {tag('E', 'EDU')}
+        <h3>Provide educational opportunities</h3>
+        <p>For students and practitioners in statistics, machine learning and financial regulation, through the Institute&rsquo;s projects and teaching.</p>
+      </article>
+      <article style="background:var(--paper)">
+        {tag('O', 'OUT')}
+        <h3>Engage in outreach through events and hackathons</h3>
+        <p>Public events and hackathons that bring researchers, supervisors and industry to the same problems.</p>
       </article>
     </div>
   </div>
@@ -614,6 +573,49 @@ PROBATIO = f'''
         <h2 style="margin-bottom:16px">What it does</h2>
         <p>It certifies tools on the decision that matters, with a conformal false alert guarantee, a winner stability figure and a walk forward test of the certification itself, and it shows that even the certified tool can be gamed. Every run passes two human gates, whose approver is checked against a register of regulated persons, and 31 critic checks; it leaves a signed, replayable ledger, a transparency record and an evidence pack, and answers the needs that the FSB, IOSCO, the Bank of England and the IMF have flagged.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="problem-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row">{tag('H', 'HRD')}<h2 id="problem-h">Why the question is open</h2></div>
+      <p class="lede">Supervisors are building surveillance tools and circuit breakers for a market in which AI agents trade. The way those tools are validated can certify the one that fails at the decision it exists to inform. Probatio exists to validate them on the decision instead.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Herding is plausible, and flagged</h3>
+        <p>Trading agents built on shared foundation models can react in correlated ways, so that a routine shock becomes a dislocation. The Financial Stability Board, IOSCO, the Bank of England and the IMF have each raised the concern, and algorithmic trading already accounts for around 70 per cent of United States equity trading.</p>
+      </div>
+      <div>
+        <h3>The yardstick is wrong</h3>
+        <p>Surveillance tools and intervention rules are validated on aggregate fidelity: how well a synthetic market reproduces volatility, spreads and correlation. A tool can match those statistics and still fail at the supervisory decision, which agents are destabilising and when to act.</p>
+      </div>
+      <div>
+        <h3>The record is empty</h3>
+        <p>Historical back tests contain almost no episodes of machine herding, so a tool can only be scored on the decision in a generated market with a known truth. Public agent based studies describe behaviour; they benchmark no tools or rules and leave no audit trail on which a certification could rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" aria-labelledby="evidence-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row">{tag('R', 'RES')}<h2 id="evidence-h">What the evidence shows</h2></div>
+      <p class="lede">The decision gap is real, a certification can carry a guarantee, and the guarantee can be stress tested.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="tile__n">0.68</div><div class="tile__l">Decision gap</div><div class="tile__t">Tools ranked by how well they mimic market statistics are close to the reverse of tools ranked by whether they catch the destabilising agents (0 is the same order, 1 the exact reverse).</div></div>
+      <div class="tile"><div class="tile__n">90%</div><div class="tile__l">Rankings still invert</div><div class="tile__t">In 90 per cent of 400 resampled batteries the two orders disagree, so the gap is not one lucky draw.</div></div>
+      <div class="tile"><div class="tile__n">1.00 &rarr; 0.25</div><div class="tile__l">The volatility trigger</div><div class="tile__t">First by fidelity, last on the decision: the conventional yardstick certifies the tool that fails at the decision it exists to inform.</div></div>
+      <div class="tile"><div class="tile__n">1 in 4</div><div class="tile__l">Guaranteed false alert bound</div><div class="tile__t">Tail dependence is certified by a conformal threshold set on eight calibration scenarios, and tops the decision ranking in 98 per cent of resamples.</div></div>
+    </div>
+    <div class="counts"><span><b>8</b> sentinels</span><span><b>8</b> rules</span><span><b>51</b> synthetic markets in <b>18</b> families</span><span><b>400</b> scenario bootstrap</span><span><b>48</b> reinforcement learning traders</span><span><b>31</b> critic checks</span><span><b>2</b> human gates</span></div>
+    <div class="after-tiles">
+      <p>The figures come from Probatio&rsquo;s demonstration battery. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
+      <a class="btn btn--ghost-ink" href="research.html">How the results are read</a>
     </div>
   </div>
 </section>

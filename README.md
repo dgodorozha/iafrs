@@ -19,9 +19,9 @@ request, and it runs from this folder as it is.
 
 ```
 iafrs/
-├── index.html         Front page: the problem, the evidence, programmes
+├── index.html         Front page: the tape, what we do, support
 ├── research.html      The programme in detail, three figures, method, limits, outputs
-├── probatio.html      The platform, described as separate from the Institute; everything about it lives here
+├── probatio.html      The platform, separate from the Institute: the problem, the evidence, a run, the controls, the terminal
 ├── about.html         Mission, principles, structure, funding
 ├── support.html       Give, partner, collaborate; contact
 ├── 404.html           For a web host to show when an address does not exist
