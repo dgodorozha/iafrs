@@ -80,7 +80,6 @@ def shell(path, title, description, body, home=False):
         <span class="brand__name">{NAME}</span>
       </a>
       <p>An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how the authorities responsible for stability can validate the tools and rules meant to contain it.</p>
-      <p>A 501(c)(3) non-profit organisation. {CITY}.</p>
     </div>
     <div>
       <h4>Pages</h4>
@@ -707,7 +706,7 @@ ABOUT = f'''
 <div class="page-head">
   <div class="wrap">
     <h1>About the Institute</h1>
-    <p class="lede">An independent, non-profit research institute for artificial intelligence, financial risk and stability, constituted in the United States and based in {CITY}.</p>
+    <p class="lede">An independent, non-profit research institute for artificial intelligence, financial risk and stability, based in {CITY}.</p>
   </div>
 </div>
 
@@ -753,7 +752,7 @@ ABOUT = f'''
     <div class="cols">
       <div>
         <h3 id="struct-h">Structure</h3>
-        <p>The Institute is a 501(c)(3) non-profit organisation based in {CITY}. It is led by its founder and director, Daria Godorozha, with a research team in statistics, law and machine learning.</p>
+        <p>The Institute is a non-profit research institute based in {CITY}. It is led by its founder and director, Daria Godorozha, with a research team in statistics, law and machine learning.</p>
       </div>
       <div>
         <h3>Independence</h3>
