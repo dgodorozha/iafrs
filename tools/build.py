@@ -561,6 +561,16 @@ PROBATIO = f'''
   </div>
 </div>
 
+<section class="section section--well" aria-labelledby="front-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row">{tag('T', 'TRM')}<h2 id="front-h">The terminal</h2></div>
+      <p class="lede">Twelve pages, each reached by a three letter code or a key, with the command line that runs them.</p>
+    </div>
+    {front_panel(with_actions=False)}
+  </div>
+</section>
+
 <section class="section" aria-labelledby="sep-h">
   <div class="wrap">
     <div class="two">
@@ -665,15 +675,6 @@ PROBATIO = f'''
   </div>
 </section>
 
-<section class="section section--well" aria-labelledby="front-h">
-  <div class="wrap">
-    <div class="head">
-      <div class="head__row">{tag('T', 'TRM')}<h2 id="front-h">The terminal</h2></div>
-      <p class="lede">Twelve pages, each reached by a three letter code or a key, with the command line that runs them.</p>
-    </div>
-    {front_panel(with_actions=False)}
-  </div>
-</section>
 '''
 
 
