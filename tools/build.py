@@ -21,8 +21,8 @@ BASE = '/iafrs/'                                # the path it is served under; t
 PROBATIO_URL = ''                      # the platform's own site, once it has one; empty means no link
 YEAR = '2026'
 
-NAV = [('research.html', 'Research'), ('probatio.html', 'Probatio'), ('people.html', 'People'),
-       ('about.html', 'About'), ('support.html', 'Support')]
+NAV = [('research.html', 'Research'), ('probatio.html', 'Probatio'), ('about.html', 'About'), ('support.html', 'Support')]
+PEOPLE_PAGE = False   # True adds the People page (PEOPLE_LIST below) to the site and the navigation
 
 
 def tag(letter, code):
@@ -34,7 +34,6 @@ def shell(path, title, description, body, home=False):
     root = BASE if path == '404.html' else ''
     nav = '\n'.join(
         '        <a href="%s%s"%s>%s</a>' % (root, href, ' aria-current="page"' if href == path else '', label) for href, label in NAV)
-    probatio_link = f'<a href="{PROBATIO_URL}" rel="noopener">Probatio</a>' if PROBATIO_URL else 'Probatio'
     return f'''<!doctype html>
 <html lang="en-GB">
 <head>
@@ -88,7 +87,6 @@ def shell(path, title, description, body, home=False):
       <ul>
         <li><a href="{root}research.html">Research</a></li>
         <li><a href="{root}probatio.html">Probatio</a></li>
-        <li><a href="{root}people.html">People</a></li>
         <li><a href="{root}about.html">About</a></li>
         <li><a href="{root}support.html">Support</a></li>
       </ul>
@@ -99,7 +97,6 @@ def shell(path, title, description, body, home=False):
         <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
         <li>{CITY}</li>
       </ul>
-      <p class="small" style="margin-top:18px">{probatio_link} is a separate platform. The Institute&rsquo;s research informs its method; the Institute does not develop, licence or operate it.</p>
     </div>
   </div>
   <div class="legal">
@@ -352,7 +349,7 @@ INDEX = f'''
     </div>
     <div class="counts"><span><b>8</b> sentinels</span><span><b>8</b> rules</span><span><b>51</b> synthetic markets in <b>18</b> families</span><span><b>400</b> scenario bootstrap</span><span><b>48</b> reinforcement learning traders</span><span><b>31</b> critic checks</span><span><b>2</b> human gates</span></div>
     <div class="after-tiles">
-      <p>The figures come from a demonstration battery produced with Probatio. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
+      <p>The figures come from a demonstration battery produced with <a href="probatio.html">Probatio</a>. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
       <a class="btn btn--ghost-ink" href="research.html">How the results are read</a>
     </div>
   </div>
@@ -393,21 +390,6 @@ INDEX = f'''
         </div>
         <p>A public library of scenario families and agent templates, written in a bounded declarative language and hashed into every battery that uses them, so that any authority can calibrate the markets to its own data, add its own families and compare its tools against the same truth as everyone else.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="prb-h">
-  <div class="wrap">
-    <div class="split">
-      <div class="sticky">
-        <div class="head" style="margin-bottom:24px">
-          <div class="head__row">{tag('P', 'PRB')}<h2 id="prb-h">The platform</h2></div>
-        </div>
-        <p class="lede" style="margin-bottom:20px">The Institute&rsquo;s method is implemented in Probatio, an agentic scenario lab in which an authority stress tests candidate tools and rules on synthetic markets calibrated from its own data.</p>
-        <p class="muted">Probatio is a separate platform with its own governance. The Institute&rsquo;s research informs its method, and the Institute uses it to produce the evidence published here; it does not develop, licence or operate it.</p>
-      </div>
-      {front_panel(short=True)}
     </div>
   </div>
 </section>
@@ -788,7 +770,7 @@ ABOUT = f'''
     <div class="cols">
       <div>
         <h3 id="struct-h">Structure</h3>
-        <p>The Institute is a 501(c)(3) non-profit organisation based in {CITY}. It is led by its founder and director, <a href="people.html">Daria Godorozha</a>, with a research team in statistics, law and machine learning.</p>
+        <p>The Institute is a 501(c)(3) non-profit organisation based in {CITY}. It is led by its founder and director, Daria Godorozha, with a research team in statistics, law and machine learning.</p>
       </div>
       <div>
         <h3>Independence</h3>
@@ -839,7 +821,7 @@ SUPPORT = f'''
 
 <section class="section section--panel" aria-labelledby="contact-h">
   <div class="wrap">
-    <div class="cols">
+    <div class="cols cols--2">
       <div>
         <h3 id="contact-h">Contact</h3>
         <p><a href="mailto:{EMAIL}">{EMAIL}</a><br>{CITY}</p>
@@ -847,10 +829,6 @@ SUPPORT = f'''
       <div>
         <h3>Press</h3>
         <p>Journalists may write to the same address. The Institute&rsquo;s people speak to the evidence they have published and to the method, and will say when a question lies outside it.</p>
-      </div>
-      <div>
-        <h3>The platform</h3>
-        <p>Questions about running Probatio belong with the platform, which is separate from the Institute. The Institute is glad to make an introduction.</p>
       </div>
     </div>
   </div>
@@ -872,7 +850,6 @@ NOT_FOUND = f'''
       <a class="btn btn--amber" href="{BASE}index.html">Front page</a>
       <a class="btn btn--ghost" href="{BASE}research.html">Research</a>
       <a class="btn btn--ghost" href="{BASE}probatio.html">Probatio</a>
-      <a class="btn btn--ghost" href="{BASE}people.html">People</a>
       <a class="btn btn--ghost" href="{BASE}about.html">About</a>
       <a class="btn btn--ghost" href="{BASE}support.html">Support</a>
     </div>
@@ -885,11 +862,14 @@ PAGES = [
     ('index.html', 'Home', 'An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how supervisors can validate the tools and rules meant to contain it.', INDEX, True),
     ('research.html', 'Research', 'Decision first certification of surveillance tools, agentic markets and herding, intervention rules, and the governance of generated evidence.', research_page(), False),
     ('probatio.html', 'Probatio', 'Probatio, an agentic scenario lab for financial stability supervisors, is a separate platform that implements the Institute’s method.', PROBATIO, False),
-    ('people.html', 'People', 'The people of the Institute for AI, Financial Risk and Stability.', people_page(), False),
     ('about.html', 'About', 'Mission, principles, structure and funding of the Institute for AI, Financial Risk and Stability.', ABOUT, False),
     ('support.html', 'Support', 'Give, partner on a pilot or collaborate with the Institute for AI, Financial Risk and Stability.', SUPPORT, False),
     ('404.html', 'Page not found', 'There is no page at this address.', NOT_FOUND, False),
 ]
+
+if PEOPLE_PAGE:
+    NAV.insert(2, ('people.html', 'People'))
+    PAGES.insert(3, ('people.html', 'People', 'The people of the Institute for AI, Financial Risk and Stability.', people_page(), False))
 
 if __name__ == '__main__':
     for path, title, desc, body, home in PAGES:

@@ -13,23 +13,22 @@ model herd, and one in which a dynamic throttle engages. It is drawn on a
 canvas from a seeded simulation (`js/site.js`), not from market data, and is
 labelled as a demonstration.
 
-The site is entirely static: seven pages, a stylesheet, one small script, six
+The site is entirely static: five pages and a 404 page, a stylesheet, one small script, six
 font files and a few images. There is no framework, tracker or third party
 request, and it runs from this folder as it is.
 
 ```
 iafrs/
-├── index.html         Front page: the problem, the evidence, programmes, the platform
+├── index.html         Front page: the problem, the evidence, programmes
 ├── research.html      The programme in detail, three figures, method, limits, outputs
-├── probatio.html      The platform, described as separate from the Institute
-├── people.html        The four people, with the biographies from the research deck
+├── probatio.html      The platform, described as separate from the Institute; everything about it lives here
 ├── about.html         Mission, principles, structure, funding
 ├── support.html       Give, partner, collaborate; contact
 ├── 404.html           For a web host to show when an address does not exist
 ├── css/styles.css
 ├── js/site.js         Menu, and the market tape on the front page
 ├── fonts/             IBM Plex Sans and JetBrains Mono, with their licences
-├── img/               Favicons, the Open Graph image, the people's photographs
+├── img/               Favicons and the Open Graph image
 └── tools/
     ├── build.py       Generates the pages from one shared shell (see below)
     └── og.html        The Open Graph image, screenshotted to img/og.png
@@ -48,6 +47,10 @@ At the top of `tools/build.py`:
   previews find the Open Graph image.
 
 Then run `python3 tools/build.py`.
+
+A People page is written but switched off: set `PEOPLE_PAGE = True` in
+`build.py`, put the photographs back under `img/people/` (the file names are
+in `PEOPLE_LIST`) and rebuild to add it to the site and the navigation.
 
 ## Editing the pages
 
