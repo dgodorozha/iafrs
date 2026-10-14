@@ -590,45 +590,6 @@ PROBATIO = f'''
 
 {research_sections()}
 
-<section class="section" aria-labelledby="sep-h">
-  <div class="wrap">
-    <div class="two">
-      <div class="prose">
-        <h2 id="sep-h" style="margin-bottom:16px">A separate platform</h2>
-        <p>Probatio is separate from the Institute, with its own governance{' and its own site' if PROBATIO_URL else ''}. The Institute&rsquo;s research informs the platform&rsquo;s method, and the Institute uses the platform to produce the evidence it publishes; it does not develop, licence or operate it, and it does not benefit from its sale.</p>
-        <p>The description on this page is of the platform as the Institute uses it. Authorities wishing to run Probatio on their own infrastructure should approach the platform directly{f', at <a href="{PROBATIO_URL}" rel="noopener">{PROBATIO_URL}</a>' if PROBATIO_URL else ''}; the Institute is glad to make an introduction and to help design a battery.</p>
-      </div>
-      <div class="prose">
-        <h2 style="margin-bottom:16px">What it does</h2>
-        <p>It certifies tools on the decision that matters, with a conformal false alert guarantee, a winner stability figure and a walk forward test of the certification itself, and it shows that even the certified tool can be gamed. Every run passes two human gates, whose approver is checked against a register of regulated persons, and 31 critic checks; it leaves a signed, replayable ledger, a transparency record and an evidence pack, and answers the needs that the FSB, IOSCO, the Bank of England and the IMF have flagged.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="problem-h">
-  <div class="wrap">
-    <div class="head">
-      <div class="head__row">{tag('H', 'HRD')}<h2 id="problem-h">Why the question is open</h2></div>
-      <p class="lede">Supervisors are building surveillance tools and circuit breakers for a market in which AI agents trade. The way those tools are validated can certify the one that fails at the decision it exists to inform. Probatio exists to validate them on the decision instead.</p>
-    </div>
-    <div class="cols">
-      <div>
-        <h3>Herding is plausible, and flagged</h3>
-        <p>Trading agents built on shared foundation models can react in correlated ways, so that a routine shock becomes a dislocation. The Financial Stability Board, IOSCO, the Bank of England and the IMF have each raised the concern, and algorithmic trading already accounts for around 70 per cent of United States equity trading.</p>
-      </div>
-      <div>
-        <h3>The yardstick is wrong</h3>
-        <p>Surveillance tools and intervention rules are validated on aggregate fidelity: how well a synthetic market reproduces volatility, spreads and correlation. A tool can match those statistics and still fail at the supervisory decision, which agents are destabilising and when to act.</p>
-      </div>
-      <div>
-        <h3>The record is empty</h3>
-        <p>Historical back tests contain almost no episodes of machine herding, so a tool can only be scored on the decision in a generated market with a known truth. Public agent based studies describe behaviour; they benchmark no tools or rules and leave no audit trail on which a certification could rest.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section section--ink" aria-labelledby="evidence-h">
   <div class="wrap">
     <div class="head">
