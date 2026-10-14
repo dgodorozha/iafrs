@@ -300,7 +300,7 @@ INDEX = f'''
         <h1>Research for a financial system in which the traders are machines.</h1>
         <p>The Institute studies how artificial intelligence changes financial risk, and how the authorities responsible for stability can validate, on the decisions that matter, the surveillance tools and intervention rules meant to contain it.</p>
         <div class="hero__actions">
-          <a class="btn btn--amber" href="research.html">Read the research programme</a>
+          <a class="btn btn--amber" href="probatio.html#research-h">Read the research</a>
           <a class="btn btn--ghost-ink" href="support.html">Support the Institute</a>
         </div>
       </div>
@@ -368,18 +368,20 @@ INDEX = f'''
 '''
 
 
-def research_page():
+def research_sections():
     bump, bump_t = bump_svg()
     bars, bars_t = bars_svg()
     dose, dose_t = dose_svg()
     legend_bars = '<div class="fig__legend"><span><i style="--k:#b5821a"></i>containment</span><span><i style="--k:#2f6fb3"></i>expected shortfall reduction</span></div>'
     return f'''
-<div class="page-head">
+<section class="section section--panel" aria-labelledby="research-h" style="padding-bottom:0">
   <div class="wrap">
-    <h1>Research programme</h1>
-    <p class="lede">The Institute&rsquo;s work asks one question in several forms: when the traders are machines, how should a supervisor decide which tools and rules to trust, and how can that decision be certified and audited?</p>
+    <div class="head" style="margin-bottom:0;padding-bottom:clamp(40px, 5vw, 64px);border-bottom:1px solid var(--line)">
+      <div class="head__row">{tag('R', 'RSH')}<h2 id="research-h">The research</h2></div>
+      <p class="lede">One question in several forms: when the traders are machines, how should a supervisor decide which tools and rules to trust, and how can that decision be certified and audited?</p>
+    </div>
   </div>
-</div>
+</section>
 
 <section class="section" aria-labelledby="crt-h">
   <div class="wrap">
@@ -552,6 +554,21 @@ def research_page():
 '''
 
 
+RESEARCH = f'''
+<div class="page-head">
+  <div class="wrap">
+    <h1>Research</h1>
+    <p class="lede">In progress, coming soon.</p>
+  </div>
+</div>
+<section class="section" aria-label="Where the research is">
+  <div class="wrap">
+    <p class="muted">The research behind the platform is set out on the <a href="probatio.html#research-h">Probatio</a> page.</p>
+  </div>
+</section>
+'''
+
+
 PROBATIO = f'''
 <div class="page-head">
   <div class="wrap">
@@ -570,6 +587,8 @@ PROBATIO = f'''
     {front_panel(with_actions=False)}
   </div>
 </section>
+
+{research_sections()}
 
 <section class="section" aria-labelledby="sep-h">
   <div class="wrap">
@@ -625,7 +644,7 @@ PROBATIO = f'''
     <div class="counts"><span><b>8</b> sentinels</span><span><b>8</b> rules</span><span><b>51</b> synthetic markets in <b>18</b> families</span><span><b>400</b> scenario bootstrap</span><span><b>48</b> reinforcement learning traders</span><span><b>31</b> critic checks</span><span><b>2</b> human gates</span></div>
     <div class="after-tiles">
       <p>The figures come from Probatio&rsquo;s demonstration battery. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
-      <a class="btn btn--ghost-ink" href="research.html">How the results are read</a>
+      <a class="btn btn--ghost-ink" href="#crt-h">How the results are read</a>
     </div>
   </div>
 </section>
@@ -742,7 +761,7 @@ ABOUT = f'''
       <div class="prose">
         <h2 style="margin-bottom:16px">What we do</h2>
         <h3 style="margin-top:0">Research</h3>
-        <p>Decision first certification, agentic markets and herding, intervention rules, and the governance of generated evidence. The programme is set out under <a href="research.html">Research</a>.</p>
+        <p>Decision first certification, agentic markets and herding, intervention rules, and the governance of generated evidence. The programme is set out on the <a href="probatio.html#research-h">Probatio</a> page.</p>
         <h3>Evidence for supervisors</h3>
         <p>Calibrated batteries run with authorities on their own data, read with them, and reported with intervals, evidence grades and limitations.</p>
         <h3>Open methods</h3>
@@ -828,7 +847,7 @@ NOT_FOUND = f'''
 
 PAGES = [
     ('index.html', 'Home', 'An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how supervisors can validate the tools and rules meant to contain it.', INDEX, True),
-    ('research.html', 'Research', 'Decision first certification of surveillance tools, agentic markets and herding, intervention rules, and the governance of generated evidence.', research_page(), False),
+    ('research.html', 'Research', 'The research of the Institute for AI, Financial Risk and Stability.', RESEARCH, False),
     ('probatio.html', 'Probatio', 'Probatio, an agentic scenario lab for financial stability supervisors, is a separate platform that implements the Institute’s method.', PROBATIO, False),
     ('about.html', 'About', 'Mission, principles, structure and funding of the Institute for AI, Financial Risk and Stability.', ABOUT, False),
     ('support.html', 'Support', 'Give, partner on a pilot or collaborate with the Institute for AI, Financial Risk and Stability.', SUPPORT, False),
