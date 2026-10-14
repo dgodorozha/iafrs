@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Institute for AI, Financial Risk and Stability</title>
+<meta name="description" content="An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how supervisors can validate the tools and rules meant to contain it.">
+<meta property="og:title" content="Institute for AI, Financial Risk and Stability">
+<meta property="og:description" content="An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how supervisors can validate the tools and rules meant to contain it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dgodorozha.github.io/iafrs/">
+<meta property="og:image" content="https://dgodorozha.github.io/iafrs/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0f16">
+<link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="img/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Institute for AI, Financial Risk and Stability, home">
+      <span class="brand__glyph" aria-hidden="true"></span>
+      <span class="brand__code" aria-hidden="true">IAFRS</span>
+      <span class="brand__name">Institute for AI, Financial Risk and Stability</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Site">
+        <a href="research.html">Research</a>
+        <a href="probatio.html">Probatio</a>
+        <a href="people.html">People</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero" aria-label="Introduction">
+  <div class="term">
+    <div class="term__bar">
+      <span class="fcode">MKT</span>
+      <span class="title">Market tape</span>
+      <span class="sub">the same shock, three worlds</span>
+      <span class="right"><span class="chip chip--amber">demonstration</span></span>
+    </div>
+    <div class="term__body">
+      <canvas id="tape" aria-hidden="true"></canvas>
+      <div class="hero__card">
+        <div class="kicker">A non-profit research institute</div>
+        <h1>Research for a financial system in which the traders are machines.</h1>
+        <p>The Institute studies how artificial intelligence changes financial risk, and how the authorities responsible for stability can validate, on the decisions that matter, the surveillance tools and intervention rules meant to contain it.</p>
+        <div class="hero__actions">
+          <a class="btn btn--amber" href="research.html">Read the research programme</a>
+          <a class="btn btn--ghost-ink" href="support.html">Support the Institute</a>
+        </div>
+      </div>
+    </div>
+    <div class="term__foot">
+      <div class="legend" aria-hidden="true"><span class="key key--quiet">quiet</span><span class="key key--herd">herd</span><span class="key key--throttle">throttle</span></div>
+      <div class="caption">Three synthetic markets receive the same shock at step 280: one in which the trading agents are independent, one in which agents on a shared foundation model herd, and one in which a dynamic throttle engages 25 steps later. Drawn from a seeded simulation, not from market data.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="problem-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row"><span class="tag"><b>H</b><span>HRD</span></span><h2 id="problem-h">Why the question is open</h2></div>
+      <p class="lede">Supervisors are building surveillance tools and circuit breakers for a market in which AI agents trade. The way those tools are validated can certify the one that fails at the decision it exists to inform.</p>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Herding is plausible, and flagged</h3>
+        <p>Trading agents built on shared foundation models can react in correlated ways, so that a routine shock becomes a dislocation. The Financial Stability Board, IOSCO, the Bank of England and the IMF have each raised the concern, and algorithmic trading already accounts for around 70 per cent of United States equity trading.</p>
+      </div>
+      <div>
+        <h3>The yardstick is wrong</h3>
+        <p>Surveillance tools and intervention rules are validated on aggregate fidelity: how well a synthetic market reproduces volatility, spreads and correlation. A tool can match those statistics and still fail at the supervisory decision, which agents are destabilising and when to act.</p>
+      </div>
+      <div>
+        <h3>The record is empty</h3>
+        <p>Historical back tests contain almost no episodes of machine herding, so a tool can only be scored on the decision in a generated market with a known truth. Public agent based studies describe behaviour; they benchmark no tools or rules and leave no audit trail on which a certification could rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" aria-labelledby="evidence-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row"><span class="tag"><b>R</b><span>RES</span></span><h2 id="evidence-h">What the evidence shows</h2></div>
+      <p class="lede">The decision gap is real, a certification can carry a guarantee, and the guarantee can be stress tested.</p>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="tile__n">0.68</div><div class="tile__l">Decision gap</div><div class="tile__t">Tools ranked by how well they mimic market statistics are close to the reverse of tools ranked by whether they catch the destabilising agents (0 is the same order, 1 the exact reverse).</div></div>
+      <div class="tile"><div class="tile__n">90%</div><div class="tile__l">Rankings still invert</div><div class="tile__t">In 90 per cent of 400 resampled batteries the two orders disagree, so the gap is not one lucky draw.</div></div>
+      <div class="tile"><div class="tile__n">1.00 &rarr; 0.25</div><div class="tile__l">The volatility trigger</div><div class="tile__t">First by fidelity, last on the decision: the conventional yardstick certifies the tool that fails at the decision it exists to inform.</div></div>
+      <div class="tile"><div class="tile__n">1 in 4</div><div class="tile__l">Guaranteed false alert bound</div><div class="tile__t">Tail dependence is certified by a conformal threshold set on eight calibration scenarios, and tops the decision ranking in 98 per cent of resamples.</div></div>
+    </div>
+    <div class="counts"><span><b>8</b> sentinels</span><span><b>8</b> rules</span><span><b>51</b> synthetic markets in <b>18</b> families</span><span><b>400</b> scenario bootstrap</span><span><b>48</b> reinforcement learning traders</span><span><b>31</b> critic checks</span><span><b>2</b> human gates</span></div>
+    <div class="after-tiles">
+      <p>The figures come from a demonstration battery produced with Probatio. The central finding, that ranking tools by fidelity nearly reverses ranking them by decision accuracy, is the subject of a paper accepted at ICAIF 2026.</p>
+      <a class="btn btn--ghost-ink" href="research.html">How the results are read</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--panel" aria-labelledby="prog-h">
+  <div class="wrap">
+    <div class="head">
+      <div class="head__row"><span class="tag"><b>P</b><span>PRG</span></span><h2 id="prog-h">Programmes</h2></div>
+      <p class="lede">Five lines of work, one question: when the traders are machines, how should a supervisor decide which tools and rules to trust, and how can that decision be certified?</p>
+    </div>
+    <div class="prog">
+      <article style="background:var(--paper)">
+        <span class="tag"><b>C</b><span>CRT</span></span>
+        <h3>Decision first certification</h3>
+        <p>Scoring surveillance tools on the supervisory decision rather than on resemblance to market statistics, with finite sample guarantees: conformal false alert bounds, winner stability and walk forward regret, so that the procedure, not one tool, is what is certified.</p>
+      </article>
+      <article style="background:var(--paper)">
+        <span class="tag"><b>H</b><span>HRD</span></span>
+        <h3>Agentic markets and herding</h3>
+        <p>Synthetic markets with a known truth: noise traders, fundamentalists, vendor clusters, reinforcement learning traders that learn to herd, distilled language model personas and colluding manipulators, and the dose response of concentration on a single model vendor.</p>
+      </article>
+      <article style="background:var(--paper)">
+        <span class="tag"><b>I</b><span>INT</span></span>
+        <h3>Intervention rules</h3>
+        <p>Circuit breakers, price bands, venue halts, dynamic throttles and kill switches across EU, UK and US style instruments, each scored on containment, false halts, tail risk, time to dislocation and proportionality against the untreated market.</p>
+      </article>
+      <article style="background:var(--paper)">
+        <span class="tag"><b>G</b><span>GOV</span></span>
+        <h3>Governance, audit and assurance</h3>
+        <p>The controls that let a supervisory system rest on generated evidence: human gates whose approver is checked against a register, signed replayable ledgers, critics that recompute every figure, transparency records and a red team that attacks the certified tool.</p>
+      </article>
+      <article class="wide" style="background:var(--paper)">
+        <div>
+          <span class="tag"><b>O</b><span>OPN</span></span>
+          <h3>An open benchmark</h3>
+          <span class="status">in preparation</span>
+        </div>
+        <p>A public library of scenario families and agent templates, written in a bounded declarative language and hashed into every battery that uses them, so that any authority can calibrate the markets to its own data, add its own families and compare its tools against the same truth as everyone else.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="prb-h">
+  <div class="wrap">
+    <div class="split">
+      <div class="sticky">
+        <div class="head" style="margin-bottom:24px">
+          <div class="head__row"><span class="tag"><b>P</b><span>PRB</span></span><h2 id="prb-h">The platform</h2></div>
+        </div>
+        <p class="lede" style="margin-bottom:20px">The Institute&rsquo;s method is implemented in Probatio, an agentic scenario lab in which an authority stress tests candidate tools and rules on synthetic markets calibrated from its own data.</p>
+        <p class="muted">Probatio is a separate platform with its own governance. The Institute&rsquo;s research informs its method, and the Institute uses it to produce the evidence published here; it does not develop, licence or operate it.</p>
+      </div>
+      <div class="front">
+    <div class="front__code">PRB</div>
+    <div class="front__name">Probatio, an agentic scenario lab</div>
+    <p>A public authority stress tests surveillance sentinels and intervention rules on synthetic AI agent markets calibrated from its own data, and certifies on decision accuracy rather than aggregate fidelity. Every run passes two human gates and a critic, and leaves a signed, replayable ledger.</p>
+    <div class="front__grid front__grid--one">
+      <div class="front__row"><span class="fcode">MKT</span><span>every simulated price step, live, one scenario at a time</span><span class="kbd">1</span></div>
+      <div class="front__row"><span class="fcode">NET</span><span>the agent correlation network, before and after the shock</span><span class="kbd">2</span></div>
+      <div class="front__row"><span class="fcode">GAP</span><span>the decision gap with its bootstrap</span><span class="kbd">3</span></div>
+      <div class="front__row"><span class="fcode">SEN</span><span>sentinel telemetry, held out results and the alert feed</span><span class="kbd">4</span></div>
+      <div class="front__row"><span class="fcode">INT</span><span>containment, dislocation probability, burden by class</span><span class="kbd">5</span></div>
+      <div class="front__row"><span class="fcode">CSF</span><span>the per scenario evidence, pivoted</span><span class="kbd">6</span></div>
+      <div class="front__row"><span class="fcode">LDG</span><span>the signed hash chain, entry by entry, with replay</span><span class="kbd">7</span></div>
+      <div class="front__row"><span class="fcode">RUN</span><span>identities, gates with refusal, emergency stop, briefing</span><span class="kbd">8</span></div>
+      <div class="front__row"><span class="fcode">ASK</span><span>grounded answers computed from the artefacts</span><span class="kbd">9</span></div>
+      <div class="front__row"><span class="fcode">AUT</span><span>the autonomy gate, in sample and leave one out</span><span class="kbd">0</span></div>
+      <div class="front__row"><span class="fcode">RSK</span><span>guarantee, cost frontier, attribution, truth audit, red team</span><span class="kbd">RSK</span></div>
+      <div class="front__row"><span class="fcode">REG</span><span>every past run, its status and its evidence pack</span><span class="kbd">REG</span></div>
+    </div>
+    <div class="front__actions">
+      <a class="btn btn--amber" href="probatio.html">About Probatio</a>
+    </div>
+    <div class="front__build">8 sentinels, 8 rules and 18 scenario families built in, extensible by the authority. 31 critic checks. 17 security controls. Runs on the authority&rsquo;s own infrastructure; no data leaves it.</div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="give-h">
+  <div class="wrap">
+    <div>
+      <h2 id="give-h">Independent evidence needs independent support.</h2>
+      <p>Gifts and grants fund the open benchmark, independent audits of the certification procedure and the researchers&rsquo; time. Authorities can partner with the Institute to run a pilot on their own data.</p>
+    </div>
+    <div class="band__actions">
+      <a class="btn btn--amber" href="support.html">Support the Institute</a>
+      <a class="btn btn--ghost-ink" href="mailto:contact@iafrs.org">Write to us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html" aria-label="Institute for AI, Financial Risk and Stability, home">
+        <span class="brand__glyph" aria-hidden="true"></span>
+        <span class="brand__code" aria-hidden="true">IAFRS</span>
+        <span class="brand__name">Institute for AI, Financial Risk and Stability</span>
+      </a>
+      <p>An independent, non-profit research institute studying how artificial intelligence changes financial risk, and how the authorities responsible for stability can validate the tools and rules meant to contain it.</p>
+      <p>A 501(c)(3) non-profit organisation. Austin, Texas.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="probatio.html">Probatio</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:contact@iafrs.org">contact@iafrs.org</a></li>
+        <li>Austin, Texas</li>
+      </ul>
+      <p class="small" style="margin-top:18px">Probatio is a separate platform. The Institute&rsquo;s research informs its method; the Institute does not develop, licence or operate it.</p>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <span>&copy; 2026 Institute for AI, Financial Risk and Stability.</span>
+      <span>Set in IBM Plex Sans and JetBrains Mono, both under the SIL Open Font Licence.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
